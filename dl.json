@@ -1,0 +1,21 @@
+{
+    "dl_number": "DL-0420110149646",
+    "current_status": "ACTIVE",
+    "holder_name": "ANURAG BREJA",
+    "date_of_issue": "01-Mar-2011",
+    "last_transaction_at": "ZONAL OFFICE, WEST DELHI, JANAKPURI",
+    "old_or_new_dl_number": "DL-0420110149646",
+    "non_transport": {
+        "from": "01-Mar-2011",
+        "to": "08-Feb-2026"
+    },
+    "transport": {
+        "from": "NA",
+        "to": "NA"
+    },
+    "hazardous_valid_till": "NA",
+    "hill_valid_till": "NA",
+    "cov_category": "NT",
+    "class_of_vehicle": "ADPVEH",
+    "cov_issue_date": "01-Mar-2011"
+}
