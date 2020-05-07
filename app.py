@@ -159,7 +159,9 @@ def run(dl_number, dob):
         try:
             dl_json = fill_form_and_parse(dl_number, dob)
         except InvalidCaptcha:
-            pass
+            print("!! Wrong captcha. Retrying with new captcha.")
+        except IndexError:
+            print("!! Internal Error. Retrying for same DL number and DOB.")
         else:
             return dl_json
 
@@ -171,14 +173,12 @@ def get_stdin():
 if __name__ == "__main__":
     while True:
         try:
-            sdtin = get_stdin()
-            _ = run(*sdtin)
+            stdin = get_stdin()
+            _ = run(*stdin)
         except WrongDLOrDOB:
             print("!! Either DL number or the date of birth is incorrect.")
         except UnExpectedResponse:
             print("!! Re-check and verify DL Number, DOB and Captcha.")
-        except IndexError:
-            print("!! Internal Error. Retrying for same DL number and DOB.")
         else:
             print(f"--- Details of Driving License: {_['dl_number']} --- ", end=str())
             write_json(_)
